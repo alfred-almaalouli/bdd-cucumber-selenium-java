@@ -2,6 +2,7 @@ package com.alfred.bdd.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
@@ -49,5 +50,6 @@ public class InventoryPage extends BasePage {
 
     public void openCart() {
         click(cartLink);
+        wait.until(ExpectedConditions.urlContains("/cart.html"));
     }
 }
